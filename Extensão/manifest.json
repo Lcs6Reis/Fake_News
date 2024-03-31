@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Fake News Detector",
+    "description": "Extensão para detectar Fake News enquanto navega na web.",
+    "permissions": [
+        "nativeMessaging",
+        "activeTab",
+        "storage"
+    ],
+    "version": "1.0",
+    "action": {
+        "default_popup": "index.html"
+    }
+}
