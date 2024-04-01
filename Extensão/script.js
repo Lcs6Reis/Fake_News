@@ -14,10 +14,11 @@ function sendNewsTextToServer(newsText) {
       return;
     }
     const fakeProbability = data.fake_probability;
+    const confidencePercentage = (fakeProbability * 100).toFixed(2);
     if (fakeProbability >= 0.5) {
-      alert(`Esta notícia parece ser falsa com ${fakeProbability.toFixed(2)} de confiança.`);
+      alert(`Esta notícia parece ser falsa com ${confidencePercentage}% de confiança.`);
     } else {
-      alert(`Esta notícia parece ser verdadeira com ${(1 - fakeProbability).toFixed(2)} de confiança.`);
+      alert(`Esta notícia parece ser verdadeira com ${(100 - confidencePercentage).toFixed(2)}% de confiança.`);
     }
   })
   .catch(error => {
